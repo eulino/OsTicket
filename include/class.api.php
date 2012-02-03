@@ -1,18 +1,18 @@
 <?php
 /*********************************************************************
-    class.api.php
+class.api.php
 
-    Api related functions...
+Api related functions...
 
-    Peter Rotich <peter@osticket.com>
-    Copyright (c)  2006-2010 osTicket
-    http://www.osticket.com
+Peter Rotich <peter@osticket.com>
+Copyright (c) 2006-2010 osTicket
+http://www.osticket.com
 
-    Released under the GNU General Public License WITHOUT ANY WARRANTY.
-    See LICENSE.TXT for details.
+Released under the GNU General Public License WITHOUT ANY WARRANTY.
+See LICENSE.TXT for details.
 
-    vim: expandtab sw=4 ts=4 sts=4:
-    $Id: class.api.php,v 1.1.2.1 2009/08/17 18:35:47 carlos.delfino Exp $
+vim: expandtab sw=4 ts=4 sts=4:
+$Id: class.api.php,v 1.1.2.1 2009/08/17 18:35:47 carlos.delfino Exp $
 **********************************************************************/
 class Api {
   
@@ -34,7 +34,7 @@ class Api {
         if(!$errors) {
             $sql='INSERT INTO '.API_KEY_TABLE.' SET created=NOW(), updated=NOW(), isactive=1'.
                  ',ipaddr='.db_input($ip).
-                 ',apikey='.db_input(strtoupper(md5($ip.md5($passphrase)))); //Security of the apikey is not as critical at the moment 
+                 ',apikey='.db_input(strtoupper(md5($ip.md5($passphrase)))); //Security of the apikey is not as critical at the moment
 
             if(db_query($sql))
                 $id=db_insert_id();

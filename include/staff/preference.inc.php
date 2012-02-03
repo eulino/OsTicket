@@ -182,35 +182,35 @@ $templates=db_query('SELECT tpl_id,name FROM '.EMAIL_TEMPLATE_TABLE.' WHERE cfg_
     </table>
     
     <table width="100%" border="0" cellspacing=0 cellpadding=2 class="tform">
-        <tr class="header"><td colspan=2>Date &amp; Time</td></tr>
+        <tr class="header"><td colspan=2><?php te('LABEL_DATE_AND_TIME')?></td></tr>
         <tr class="subheader">
-            <td colspan=2>Please refer to <a href="http://php.net/date" target="_blank">PHP Manual</a> for supported parameters.</td>
+            <td colspan=2><?php te('TEXT_PHP_REFERENCE')?></td>
         </tr>
-        <tr><th>Time Format:</th>
+        <tr><th><?php te('LABEL_TIME_FORMAT')?></th>
             <td>
                 <input type="text" name="time_format" value="<?=$config['time_format']?>">
                     &nbsp;<font class="error">*&nbsp;<?=$errors['time_format']?></font>
                     <i><?=Format::date($config['time_format'],$gmtime,$config['timezone_offset'],$config['enable_daylight_saving'])?></i></td>
         </tr>
-        <tr><th>Date Format:</th>
+        <tr><th><?php te('LABEL_DATE_FORMAT')?></th>
             <td><input type="text" name="date_format" value="<?=$config['date_format']?>">
                         &nbsp;<font class="error">*&nbsp;<?=$errors['date_format']?></font>
                         <i><?=Format::date($config['date_format'],$gmtime,$config['timezone_offset'],$config['enable_daylight_saving'])?></i>
             </td>
         </tr>
-        <tr><th>Date &amp; Time Format:</th>
+        <tr><th><?php te('LABEL_DATE_AND_TIME_FORMAT')?></th>
             <td><input type="text" name="datetime_format" value="<?=$config['datetime_format']?>">
                         &nbsp;<font class="error">*&nbsp;<?=$errors['datetime_format']?></font>
                         <i><?=Format::date($config['datetime_format'],$gmtime,$config['timezone_offset'],$config['enable_daylight_saving'])?></i>
             </td>
         </tr>
-        <tr><th>Day, Date &amp; Time Format:</th>
+        <tr><th><?php te('LABEL_DAY_DATE_AND_TIME_FORMAT')?></th>
             <td><input type="text" name="daydatetime_format" value="<?=$config['daydatetime_format']?>">
                         &nbsp;<font class="error">*&nbsp;<?=$errors['daydatetime_format']?></font>
                         <i><?=Format::date($config['daydatetime_format'],$gmtime,$config['timezone_offset'],$config['enable_daylight_saving'])?></i>
             </td>
         </tr>
-        <tr><th>Default Timezone:</th>
+        <tr><th><?php te('LABEL_DEFAULT_TIMEZONE')?></th>
             <td>
                 <select name="timezone_offset">
                     <?
@@ -228,16 +228,16 @@ $templates=db_query('SELECT tpl_id,name FROM '.EMAIL_TEMPLATE_TABLE.' WHERE cfg_
             </td>
         </tr>
         <tr>
-            <th>Daylight Saving:</th>
+            <th><?php te('LABEL_DAYLIGHT_SAVING')?></th>
             <td>
-                <input type="checkbox" name="enable_daylight_saving" <?=$config['enable_daylight_saving'] ? 'checked': ''?>>Observe daylight savings
+                <input type="checkbox" name="enable_daylight_saving" <?=$config['enable_daylight_saving'] ? 'checked': ''?>><?php te('TEXT_DAYLIGHT_SAVING')?>
             </td>
         </tr>
     </table>
    
     <table width="100%" border="0" cellspacing=0 cellpadding=2 class="tform">
-        <tr class="header"><td colspan=2>Ticket Options &amp; Settings</td></tr>
-        <tr class="subheader"><td colspan=2>If enabled ticket lock get auto-renewed on form activity.</td></tr>
+        <tr class="header"><td colspan=2><?php te('LABEL_TICKET_OPTIONS_AND_SETTINGS')?></td></tr>
+        <tr class="subheader"><td colspan=2><?php te('TEXT_TICKET_LOCK')?></td></tr>
         <tr><th valign="top">Ticket IDs:</th>
             <td>
                 <input type="radio" name="random_ticket_ids"  value="0"   <?=!$config['random_ticket_ids']?'checked':''?> /> Sequential

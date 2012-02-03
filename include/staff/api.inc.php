@@ -33,7 +33,7 @@ $showing=db_num_rows($result)?$pageNav->showing():'';
 $negorder=$order=='DESC'?'ASC':'DESC'; //Negate the sorting..
 $deletable=0;
 ?>
-<div class="msg">API Keys</div>
+<div class="msg"><?php te('LABEL_API_KEYS')?></div>
 <hr>
 <div><b><?=$showing?></b></div>
  <table width="100%" border="0" cellspacing=1 cellpadding=2>
@@ -44,11 +44,11 @@ $deletable=0;
     <table border="0" cellspacing=0 cellpadding=2 class="dtable" align="center" width="100%">
         <tr>
 	        <th width="7px">&nbsp;</th>
-	        <th>API Key</th>
-            <th width="10" nowrap>Active</th>
-            <th width="100" nowrap>&nbsp;&nbsp;IP Address</th>
+	        <th><?php te('LABEL_API_KEY')?></th>
+            <th width="10" nowrap><?php te('LABEL_ACTIVE')?></th>
+            <th width="100" nowrap>&nbsp;&nbsp;<?php te('LABEL_IP_ADDRESS')?></th>
 	        <th width="150" nowrap>&nbsp;&nbsp;
-                <a href="admin.php?t=api&sort=date&order=<?=$negorder?><?=$qstr?>" title="Sort By Create Date <?=$negorder?>">Created</a></th>
+                <a href="admin.php?t=api&sort=date&order=<?=$negorder?><?=$qstr?>" title="<?php te('TEXT_SORT_BY_CREATE_DATE')?> <?=$negorder?>"><?php te('LABEL_CREATED')?></a></th>
         </tr>
         <?
         $class = 'row1';
@@ -83,7 +83,7 @@ $deletable=0;
             $class = ($class =='row2') ?'row1':'row2';
             } //end of while.
         else: //nothin' found!! ?> 
-            <tr class="<?=$class?>"><td colspan=5><b>Query returned 0 results</b>&nbsp;&nbsp;<a href="admin.php?t=templates">Index list</a></td></tr>
+            <tr class="<?=$class?>"><td colspan=5><?php te('TEXT_QUERY_RETURNED_0_RESULTS')?></td></tr>
         <?
         endif; ?>
      
@@ -96,18 +96,18 @@ $deletable=0;
         <td align="center">
             <?php
             if($inactive) {?>
-                <input class="button" type="submit" name="enable" value="Enable"
-                     onClick='return confirm("Are you sure you want to ENABLE selected keys?");'>
+                <input class="button" type="submit" name="enable" value="<?php te('LABEL_ENABLE')?>"
+                     onClick='return confirm("<?php te('ALERT_ENABLE_KEYS')?>");'>
             <?php
             }
             if($active){?>
             &nbsp;&nbsp;
-                <input class="button" type="submit" name="disable" value="Disable"
-                     onClick='return confirm("Are you sure you want to DISABLE selected keys?");'>
+                <input class="button" type="submit" name="disable" value="<?php te('LABEL_DISABLE')?>"
+                     onClick='return confirm("<?php te('ALERT_DISABLE_KEYS')?>");'>
             <?}?>
             &nbsp;&nbsp;
-            <input class="button" type="submit" name="delete" value="Delete" 
-                     onClick='return confirm("Are you sure you want to DELETE selected keys?");'>
+            <input class="button" type="submit" name="delete" value="<?php te('LABEL_DELETE')?>" 
+                     onClick='return confirm("<?php te('ALERT_DELETE_KEYS')?>");'>
         </td>
     </tr>
     <?
@@ -116,32 +116,32 @@ $deletable=0;
     </form>
  </table>
  <br/>
- <div class="msg">Add New IP</div>
+ <div class="msg"><?php te('TEXT_ADD_NEW_IP')?></div>
  <hr>
  <div>
-   Add a new IP address.&nbsp;&nbsp;<font class="error"><?=$errors['ip']?></font>
+   <?php te('TEXT_ADD_NEW_IP_ADDRESS')?>&nbsp;&nbsp;<font class="error"><?=$errors['ip']?></font>
    <form action="admin.php?t=api" method="POST" >
     <input type=hidden name='t' value='api'>
     <input type=hidden name='do' value='add'>
-    New IP:
+    <?php te('LABEL_NEW_IP')?>
     <input name="ip" size=30 value="<?=($errors['ip'])?Format::htmlchars($_REQUEST['ip']):''?>" />
     <font class="error">*&nbsp;</font>&nbsp;&nbsp;
-     &nbsp;&nbsp; <input class="button" type="submit" name="add" value="Add">
+     &nbsp;&nbsp; <input class="button" type="submit" name="add" value="<?php te('LABEL_ADD')?>">
     </form>
  </div>
  <br/>
- <div class="msg">API Passphrase</div>
+ <div class="msg"><?php te('TEXT_API_PASSPHRASE')?></div>
  <hr>
  <div>
-   Passphrase must be at least 3 words. Required to generate the api keys.<br/>
+   <?php te('TEXT_API_PASSPHRASE_TEXT')?><br/>
    <form action="admin.php?t=api" method="POST" >
     <input type=hidden name='t' value='api'>
     <input type=hidden name='do' value='update_phrase'>
-    Phrase:
+    <?php te('LABEL_PHRASE')?>
     <input name="phrase" size=50 value="<?=Format::htmlchars($info['phrase'])?>" />
     <font class="error">*&nbsp;<?=$errors['phrase']?></font>&nbsp;&nbsp;
-     &nbsp;&nbsp; <input class="button" type="submit" name="update" value="Submit">
+     &nbsp;&nbsp; <input class="button" type="submit" name="update" value="<?php te('LABEL_SUBMIT')?>">
     </form>
     <br/><br/>
-    <div><i>Please note that changing the passprase does NOT invalidate existing keys. To regerate a key you need to delete and readd it.</i></div>
+    <div><i><?php te('TEXT_API_PASSPHRASE_TEXT_NOTE')?></i></div>
  </div>

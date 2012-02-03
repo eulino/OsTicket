@@ -23,11 +23,15 @@ $LANG['ALERT_EXCESSIVE_LOGIN_ATTEMPTS_BY_CLIENT'] = 'Excessive login attempts by
                 'IP: {2}'."\n".
 				'Time: {3}'."\n\n".
                 'Attempts #{4}';
+$LANG['ALERT_ENABLE_KEYS'] = 'Are you sure you want to ENABLE selected keys?';
+$LANG['ALERT_DISABLE_KEYS'] = 'Are you sure you want to DISABLE selected keys?';
+$LANG['ALERT_DELETE_KEYS'] = 'Are you sure you want to DELETE selected keys?';
 
 #######
 ## Error Mensages
 ##
 $LANG['ERROR_ACCESS_DENIED_INVALID_TICKET'] = 'Access Denied. Possibly invalid ticket ID';
+$LANG['ERROR_API_PASSPHRASE_MISSING'] = 'API passphrase missing.';
 $LANG['ERROR_EMAIL_PARSE_FAILED'] = 'Email parse failed';
 $LANG['ERROR_FILE_REJECTED'] = 'File {0} rejected!';
 $LANG['ERROR_INVALID_FROM_ADDRESS'] = 'Invalid FROM address';
@@ -67,7 +71,9 @@ $LANG['IMAGE_STAFF_REFRESH'] = 'staff/refresh.gif';
 ## Labels for Bottons, Headers on Tables, Selections, Link Texts and others
 ##
 // Label A
+$LANG['LABEL_ACTIVE'] = 'Active';
 $LANG['LABEL_ACTIVE_IN_PARENTESIS'] = '(Active)';
+$LANG['LABEL_ADD'] = 'Add';
 $LANG['LABEL_ADD_NEW_DEPT'] = 'Add New Dept.';
 $LANG['LABEL_ADMIN_DASHBOARD'] = 'Admin Dashboard';
 $LANG['LABEL_ADMIN_PANEL'] = 'Admin Panel';
@@ -75,6 +81,8 @@ $LANG['LABEL_ADVANCED'] = 'Advanced';
 $LANG['LABEL_ALL'] = 'All';
 $LANG['LABEL_ALL_DEPARTMENTS'] = 'All Departments';
 $LANG['LABEL_API'] = 'API';
+$LANG['LABEL_API_KEY'] = 'API Key';
+$LANG['LABEL_API_KEYS'] = 'API Keys';
 $LANG['LABEL_APPEND'] = 'Append';
 $LANG['LABEL_APPEND_SIGNATURE'] = 'Append Signature'; 
 $LANG['LABEL_ASC'] = 'ASC';
@@ -101,12 +109,19 @@ $LANG['LABEL_CATEGORY_DEPT'] = 'Category/Dept';
 $LANG['LABEL_CHANGE_PASSWORD'] = 'Change Password';
 $LANG['LABEL_CHECK_STATUS'] = 'Check Status';
 $LANG['LABEL_CLOSED'] = 'Closed';
+$LANG['LABEL_CREATED'] = 'Created';
 $LANG['LABEL_CREATE_DATE'] = 'Create Date';
 // Label D
 $LANG['LABEL_DASHBOARD'] = 'Dashboard';
 $LANG['LABEL_DATE'] = 'Date';
+$LANG['LABEL_DATE_AND_TIME'] = 'Date &amp; Time:';
+$LANG['LABEL_DATE_AND_TIME_FORMAT'] = 'Date &amp; Time Format:';
+$LANG['LABEL_DATE_FORMAT'] = 'Date Format:';
 $LANG['LABEL_DATE_SPAN'] = 'Date Span';
+$LANG['LABEL_DAY_DATE_AND_TIME_FORMAT'] = 'Day, Date &amp; Time Format:';
+$LANG['LABEL_DAYLIGHT_SAVING'] = 'Daylight Saving:';
 $LANG['LABEL_DEFAULT'] = 'Default';
+$LANG['LABEL_DEFAULT_TIMEZONE'] = 'Default Timezone:';
 $LANG['LABEL_DELETE'] = 'Delete';
 $LANG['LABEL_DELETE_DEPT_S'] = 'Delete Dept(s)';
 $LANG['LABEL_DEPARTMENT'] = 'Department';
@@ -123,6 +138,7 @@ $LANG['LABEL_DEPT_SIGNATURE'] = 'Dept. Signature';
 $LANG['LABEL_DEPT_TYPE'] = 'Dept. Type';
 $LANG['LABEL_DESC'] = 'DESC';
 $LANG['LABEL_DESCENDING'] = 'Descending';
+$LANG['LABEL_DISABLE'] = 'Disabled';
 $LANG['LABEL_DISABLED_IN_PARENTESIS'] = '(Disabled)';
 $LANG['LABEL_DIRECTORY'] = 'Directory';
 $LANG['LABEL_DIRECTORY_STAFF'] = 'Staff Directory';
@@ -133,6 +149,7 @@ $LANG['LABEL_EMAILS_SETTINGS'] = 'E-Mails Settings';
 $LANG['LABEL_EMAIL_ADDRESS'] = 'Email Address';
 $LANG['LABEL_EMAIL_TEMPLATES'] = 'Email Templates';
 $LANG['LABEL_ENABLE_SYSTEM_OFF_LINE'] = 'Enable';
+$LANG['LABEL_ENABLE'] = 'Enable';
 $LANG['LABEL_ENTER_NOTE_CONTENT'] = 'Enter note content.';
 // Label F
 $LANG['LABEL_FROM'] = 'From.';
@@ -166,6 +183,7 @@ $LANG['LABEL_HELPDESK_STATUS'] = 'Helpdesk Status';
 $LANG['LABEL_HELPDESK_SYSTEM_LOG_LEVEL'] = 'System Log Level';
 $LANG['LABEL_HELPDESK_URL'] = 'Helpdesk URL';
 // Label I
+$LANG['LABEL_IP_ADDRESS'] = 'IP Address';
 $LANG['LABEL_ISSUE_SUMMARY'] = 'Issue Summary';
 // Label J
 // Label K
@@ -188,6 +206,7 @@ $LANG['LABEL_MY_SIGNATURE'] = 'My signature';
 // Label N
 $LANG['LABEL_NAME'] = 'Name';
 $LANG['LABEL_NEW_DEPARTMENT'] = 'New Department';
+$LANG['LABEL_NEW_IP'] = 'New IP:';
 $LANG['LABEL_NEW_MESSAGE'] = 'New Message';
 $LANG['LABEL_NEW_PREMADE_REPLY'] = 'New Premade Reply';
 $LANG['LABEL_NEW_TICKET'] = 'New Ticket';
@@ -206,6 +225,7 @@ $LANG['LABEL_OVERDUE'] = 'Overdue';
 $LANG['LABEL_PAGE'] = 'page';
 $LANG['LABEL_PASSWORD'] = 'Password';
 $LANG['LABEL_PASSWORD_AGAIN'] = 'Password (again)';
+$LANG['LABEL_PHRASE'] = 'Phrase:';
 $LANG['LABEL_PHONE'] = 'Phone';
 $LANG['LABEL_POST_INTERNAL_NOTE'] = 'Post Internal Note';
 $LANG['LABEL_POST_REPLY']='Post Reply';
@@ -275,6 +295,8 @@ $LANG['LABEL_TELEPHONE'] = 'Telephone';
 $LANG['LABEL_TICKET'] = 'Ticket';
 $LANG['LABEL_TICKET_ID'] = 'Ticket ID';
 $LANG['LABEL_TICKET_NUMBER'] = 'Ticket#';
+$LANG['LABEL_TICKET_OPTIONS_AND_SETTINGS'] = 'Ticket Options &amp; Settings';
+$LANG['LABEL_TIME_FORMAT'] = 'Time Format:';
 //$LANG['LABEL_TICKET_SOURCE']
 $LANG['LABEL_TICKET_STATUS'] = 'Ticket Status';
 $LANG['LABEL_TO'] = 'To.';
@@ -295,12 +317,17 @@ $LANG['LABEL_VIEW_STATUS'] = 'View Status';
 ##
 // TEXT A
 $LANG['TEXT_ACCESS_DENIED'] = 'Access Denied';
+$LANG['TEXT_ADD_NEW_IP'] = 'Add New IP';
+$LANG['TEXT_ADD_NEW_IP_ADDRESS'] = 'Add New IP address.';
 $LANG['TEXT_ALL_DEPARTMENTS'] = 'All Departments';
 $LANG['TEXT_AND_STATUS_SET_TO'] = ' and status set to {0}';
 $LANG['TEXT_AND_TICKET_STATUS_SET_TO_CLOSED'] = ' & ticket status set to closed';
 $LANG['TEXT_ANSWERED_STATS'] = 'Tickets Respondidos ({0})';
 $LANG['TEXT_ANSWERED_TICKETS'] = 'Answered Tickets';
 $LANG['TEXT_ANY_STATUS'] = 'Any status';
+$LANG['TEXT_API_PASSPHRASE'] = 'API Passphrase';
+$LANG['TEXT_API_PASSPHRASE_TEXT'] = 'Passphrase must be at least 3 words. Required to generate the api keys.';
+$LANG['TEXT_API_PASSPHRASE_TEXT_NOTE'] = 'Please note that changing the passprase does NOT invalidate existing keys. To regerate a key you need to delete and readd it.';
 $LANG['TEXT_ASSIGNED_TICKETS'] = 'Assigned Tickets';
 $LANG['TEXT_ATTACH_FILE'] = 'Attach File';
 $LANG['TEXT_AUTHENTICATION_REQUIRED'] = 'Authentication Required';
@@ -314,6 +341,7 @@ $LANG['TEXT_CLOSED'] = 'Closed';
 $LANG['TEXT_COMMENTS_REASONS_TRANSFER'] = 'Comments/Reasons for the transfer. &nbsp;(<i>Internal note</i>)';
 $LANG['TEXT_CREATE_FAILED'] = 'Create Failed ';
 // TEXT D
+$LANG['TEXT_DAYLIGHT_SAVING'] = 'Observe daylight savings';
 $LANG['TEXT_DEPT_DEPENDS_ON_EMAIL'] = 'Dept depends on email &amp; help topics settings for incoming tickets.';
 $LANG['TEXT_DEPT_TRANSFER'] = 'Dept. Transfer';
 $LANG['TEXT_DEPT_UPDATED_SUCCESSFULLY'] = 'Dept updated successfully';
@@ -352,6 +380,7 @@ $LANG['TEXT_MY_TICKETS_STATS'] = 'My Tickets ({0})';
 $LANG['TEXT_NEW_TICKET'] = 'New Ticket';
 $LANG['TEXT_NEW_TICKET_AUTO_RESPONSE'] = 'An email with the ticket number has been sent to <b>{0}</b>.You\'ll need the ticket number along with your email to view status and progress online.<br><br>If you wish to send additional comments or information regarding same issue, please follow the instructions on the email.';
 $LANG['TEXT_NOT_THIS_USER'] = 'I am not this user';
+$LANG['TEXT_NO'] = 'No';
 $LANG['TEXT_NO_TICKETS_FOUND'] = 'NO tickets found.';
 // TEXT O
 $LANG['TEXT_OPEN'] = 'Open';
@@ -374,9 +403,11 @@ $LANG['TEXT_OVERDUE_TICKETS'] = 'Overdue Tickets';
 $LANG['TEXT_PLEASE_FILL_STAFF_FORM_BELOW_OPEN_NEW_TICKET'] = 'Please fill in the form below to open a new ticket.';
 $LANG['TEXT_PLEASE_FILL_FORM_NEW_TICKET'] = 'Please fill in the form below to open a new ticket.';
 $LANG['TEXT_PLEASE_TAKE_A_MINUTE_TO_DELETE_INSTALL'] = 'Please take a minute to delete <strong>setup/install</strong> directory for security reasons.';
+$LANG['TEXT_PHP_REFERENCE'] = 'Please refer to <a href="http://php.net/date" target="_blank">PHP Manual</a> for supported parameters.';
 $LANG['TEXT_POST_REPLY'] = 'Post Reply';
 $LANG['TEXT_PRIORITY_CHANGED_SUCCESSFULLY'] = 'Priority Changed Successfully';
 // TEXT Q
+$LANG['TEXT_QUERY_RETURNED_0_RESULTS'] = '<b>Query returned 0 results</b>&nbsp;&nbsp;<a href="admin.php?t=templates">Index list</a>';
 // TEXT R
 $LANG['TEXT_REFRESH'] = 'Refresh';
 $LANG['TEXT_REQUIRED_WHEN_DEPT_IS_PUBLIC'] = 'Required when Dept is public';
@@ -391,6 +422,7 @@ $LANG['TEXT_SESSION_TIMED_OUT_DUE_TO_INACTIVITY']='Session timed out due to inac
 $LANG['TEXT_SHOW_FROM_TO_OF_ALL'] = 'Showing {0} - {1} of {2}';
 $LANG['TEXT_SHOW_ZERO'] = 'Showing 0 (zero)';
 $LANG['TEXT_SORT_BY_CATEGORY'] = 'Sort By Category';
+$LANG['TEXT_SORT_BY_CREATE_DATE'] = 'Sort By Create Date';
 $LANG['TEXT_SORT_BY_DATE'] = 'Sort By Date';
 $LANG['TEXT_SORT_BY_DEPARTMENT'] = 'Sort By Department';
 $LANG['TEXT_SORT_BY_TICKET_ID'] = 'Sort By Ticket ID';
@@ -406,6 +438,7 @@ $LANG['TEXT_TICKET_CREATED'] = 'Support ticket request created';
 $LANG['TEXT_TICKET_CREATED_SUCCESSFULLY'] = 'Ticket created successfully';
 $LANG['TEXT_TICKET_DELETED_FOREVER'] = 'Ticket Deleted Forever';
 $LANG['TEXT_TICKET_FLAGGED_AS_OVERDUE'] = 'Ticket flagged as overdue';
+$LANG['TEXT_TICKET_LOCK'] = 'If enabled ticket lock get auto-renewed on form activity.';
 $LANG['TEXT_TICKET_NUM_STATUS_SET_CLOSED'] = 'Ticket #{0} status set to CLOSED';
 $LANG['TEXT_TICKET_NUMBER'] = 'Ticket #';
 $LANG['TEXT_TICKET_STATUS'] = 'Ticket Status';
@@ -430,6 +463,7 @@ $LANG['TEXT_VIEW_TICKET'] = 'View Ticket';
 $LANG['TEXT_VISIBLE_TO_CLIENT'] = 'Visible to client/customer.';
 // TEXT X
 // TEXT Y
+$LANG['TEXT_YES'] = 'Yes';
 $LANG['TEXT_YOUVE_REACHED_MAXIMUM_FAILED_LOGIN_ATTEMPTS_ALLOWED']='You\'ve reached maximum failed login attempts allowed.';
 // TEXT W
 $LANG['TEXT_WELCOME_BACK'] = 'Welcome back';
